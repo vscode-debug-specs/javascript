@@ -1,4 +1,4 @@
-# How to Debug ServerSide JavaScript(NodeJS) and TypeScript with VSCode
+# How to Debug ServerSide JavaScript(NodeJS) and TypeScript with VS Code
 
 ## Summary
 
