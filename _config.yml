@@ -1,6 +1,7 @@
+destination: VS Code debug specs - Java Script & Type Script
 theme: jekyll-theme-cayman
 gems:
-    - jekyll-readme-index
+  - jekyll-readme-index
 readme_index:
-    enabled: true
-    remove_originals: false
+  enabled: true
+  remove_originals: false
