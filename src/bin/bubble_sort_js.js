@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const bubble_sort = require("../bubble_sort");
+const bubble_sort = require("../bubblesort_js/bubble_sort");
 
 if (process.argv.length < 3) {
     console.log("usage bubble_sort 3 2 1...");

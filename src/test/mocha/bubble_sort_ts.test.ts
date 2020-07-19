@@ -1,4 +1,4 @@
-import { bubbleSort } from "../../ts/bubble_sort";
+import { bubbleSort } from "../../bubblesort_ts/bubble_sort";
 import { describe, it } from "mocha";
 import assert from "assert";
 

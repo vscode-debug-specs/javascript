@@ -4,45 +4,29 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Mocha Tests",
-      "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
-      "args": [
-        "-u",
-        "tdd",
-        "--timeout",
-        "1000000",
-        "--colors",
-        "${workspaceRoot}/mocha"
-      ],
-      "internalConsoleOptions": "openOnSessionStart"
+      "name": "Launch js",
+      "program": "${workspaceFolder}/src/bin/bubble_sort_js.js",
+      "args": ["4", "3", "2", "1"]
     },
     {
       "type": "node",
       "request": "launch",
-      "name": "Jasmine-node Tests",
-      "program": "${workspaceFolder}/node_modules/jasmine-node/bin/jasmine-node",
-      "cwd": "${workspaceFolder}",
-      "args": ["./jasmine"],
-      "internalConsoleOptions": "openOnSessionStart"
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Launch Program",
-      "program": "${workspaceFolder}/bin/bubble_sort.js",
-      "args": ["4", "3", "2", "1"],
-      "internalConsoleOptions": "openOnSessionStart"
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Launch Program (typescript)",
-      "program": "${workspaceFolder}/typescriptout/bubble_sorter.js",
+      "name": "Launch ts (using out/)",
+      "program": "${workspaceFolder}/out/bin/bubble_sort_ts.js",
       "args": ["4", "3", "2", "1"],
       "sourceMaps": true,
       "stopOnEntry": false,
-      "internalConsoleOptions": "openOnSessionStart",
       "preLaunchTask": "tsc"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch ts (using ts-node)",
+      "program": "${workspaceFolder}/src/bin/bubble_sort_ts.ts",
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only"],
+      "args": ["4", "3", "2", "1"],
+      "sourceMaps": true,
+      "stopOnEntry": false
     },
     {
       "type": "node",

@@ -1,4 +1,4 @@
-const bubble_sort = require("../../js/bubble_sort");
+const bubble_sort = require("../../bubblesort_js/bubble_sort");
 const assert = require("assert");
 
 describe("bubble_sort js", () => {
