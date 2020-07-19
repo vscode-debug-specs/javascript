@@ -31,11 +31,11 @@
     {
       "type": "node",
       "request": "attach",
-      "name": "Attach to Remote",
-      "address": "192.168.56.101",
-      "port": 5858,
-      "localRoot": "${workspaceRoot}",
-      "remoteRoot": "${workspaceRoot}"
+      "name": "Attach to Remote node",
+      "address": "127.0.0.1",
+      "port": 9229,
+      "localRoot": "${workspaceFolder}",
+      "remoteRoot": "${workspaceFolder}"
     },
     {
       "type": "node",

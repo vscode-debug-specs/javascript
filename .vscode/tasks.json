@@ -8,6 +8,20 @@
       "label": "tsc",
       "tsconfig": "tsconfig.json",
       "problemMatcher": ["$tsc"]
+    },
+    {
+      "type": "shell",
+      "label": "launch remote ts process",
+      "command": "node",
+      "args": [
+        "--inspect-brk",
+        "out/bin/bubble_sort_ts.js",
+        "4",
+        "3",
+        "2",
+        "1"
+      ],
+      "problemMatcher": []
     }
   ]
 }
