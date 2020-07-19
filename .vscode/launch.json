@@ -15,7 +15,6 @@
       "program": "${workspaceFolder}/out/bin/bubble_sort_ts.js",
       "args": ["4", "3", "2", "1"],
       "sourceMaps": true,
-      "stopOnEntry": false,
       "preLaunchTask": "tsc"
     },
     {
@@ -25,8 +24,13 @@
       "program": "${workspaceFolder}/src/bin/bubble_sort_ts.ts",
       "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only"],
       "args": ["4", "3", "2", "1"],
-      "sourceMaps": true,
-      "stopOnEntry": false
+      "sourceMaps": true
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach by Process ID",
+      "processId": "${command:PickProcess}"
     },
     {
       "type": "node",
@@ -36,12 +40,6 @@
       "port": 9229,
       "localRoot": "${workspaceFolder}",
       "remoteRoot": "${workspaceFolder}"
-    },
-    {
-      "type": "node",
-      "request": "attach",
-      "name": "Attach by Process ID",
-      "processId": "${command:PickProcess}"
     }
   ]
 }
