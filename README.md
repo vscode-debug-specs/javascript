@@ -167,7 +167,7 @@ node --inspect --inspect-brk ./bin/bubble_sort.js
 
 2. start debug
 3. select process id
-   - ![attach_running_process.png](attach_running_process.png)
+   - ![attach_running_process.png](./docs/attach_running_process.png)
 
 ## remote process
 

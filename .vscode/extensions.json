@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    // for all laguages
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode",
+    // for JS/TS
+    "Compulim.vscode-mocha",
+    "hbenl.vscode-test-explorer",
+    "hbenl.vscode-mocha-test-adapter",
+    "hbenl.vscode-jasmine-test-adapter"
+  ]
+}
