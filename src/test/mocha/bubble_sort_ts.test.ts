@@ -1,10 +1,11 @@
-const bubble_sort = require("../../js/bubble_sort");
-const assert = require("assert");
+import { bubbleSort } from "../../ts/bubble_sort";
+import { describe, it } from "mocha";
+import assert from "assert";
 
-describe("bubble_sort", () => {
+describe("bubble_sort ts", () => {
     it("sort list", () => {
         const list = [4, 3, 2, 1];
-        bubble_sort.sort(list);
+        bubbleSort(list);
         assert.equal(list[0], 1);
         assert.equal(list[1], 2);
         assert.equal(list[2], 3);
@@ -12,11 +13,11 @@ describe("bubble_sort", () => {
     });
 });
 
-describe("stop at exception", () => {
+describe("stop at exception ts", () => {
     it("stop exception", () => {
         try {
             throw new Error("throw error");
-            asset.fail();
-        } catch (e) {}
+            assert.fail();
+        } catch (e) { }
     });
 });

@@ -1,4 +1,4 @@
 {
-  "mochaExplorer.files": "src/test/**/*.js",
-  "jasmineExplorer.config": "src/spec/support/jasmine.json"
+  "mochaExplorer.files": ["src/test/**/*.js", "src/test/**/*.ts"],
+  "mochaExplorer.require": "ts-node/register"
 }
