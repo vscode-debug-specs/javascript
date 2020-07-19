@@ -1,13 +1,11 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "ES2019",
     "module": "commonjs",
     // must set for debug
     "sourceMap": true,
-    // must set output dir
-    "outDir": "./typescriptout",
+    "outDir": "./out",
     "strict": true,
-    "esModuleInterop": true,
-    // "sourceRoot": "./typescript",
+    "esModuleInterop": true
   }
 }
