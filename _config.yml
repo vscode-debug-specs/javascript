@@ -1,5 +1,5 @@
-destination: VS Code debug specs - Java Script & Type Script
-title: VS Code debug specs - Java Script & Type Script
+destination: VS Code debug specs - Server Side (NodeJS) Java Script & Type Script
+title: VS Code debug specs - Server Side (NodeJS) Java Script & Type Script
 theme: jekyll-theme-cayman
 gems:
   - jekyll-readme-index
