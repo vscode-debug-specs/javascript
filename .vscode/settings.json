@@ -1,1 +1,4 @@
-{}
+{
+  "mochaExplorer.files": "src/test/**/*.js",
+  "jasmineExplorer.config": "src/spec/support/jasmine.json"
+}
