@@ -6,7 +6,7 @@ if (process.argv.length < 3) {
     process.exit(1);
 }
 
-const list = [];
+const list = [] as number[];
 for (let i = 2; i < process.argv.length; i++) {
     const n = parseInt(process.argv[i], 10);
     if (isNaN(n)) {
