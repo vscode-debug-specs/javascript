@@ -1,0 +1,57 @@
+openapi: 3.0.1
+info:
+  description: Sample GIS Calc
+  title: GIS Calc
+  version: 0.1.0
+servers:
+- url: /
+paths:
+  /route_length:
+    post:
+      description: route length
+      operationId: routeLength
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/route'
+        description: route
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+          description: result
+      x-eov-operation-handler: controllers/DefaultController
+components:
+  schemas:
+    point:
+      example:
+        latitude: 0.8008281904610115
+        longitude: 6.027456183070403
+      properties:
+        latitude:
+          description: latitude
+          type: number
+        longitude:
+          description: longitude
+          type: number
+      required:
+      - latitude
+      - longitude
+      type: object
+    route:
+      items:
+        $ref: '#/components/schemas/point'
+      type: array
+    inline_response_200:
+      example:
+        length: 0.8008281904610115
+      properties:
+        length:
+          type: number
+      required:
+      - length
+      type: object

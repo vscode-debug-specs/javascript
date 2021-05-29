@@ -1,0 +1,47 @@
+openapi: "3.0.1"
+info:
+  title: GIS Calc
+  version: 0.1.0
+  description: Sample GIS Calc
+paths:
+  /route_length:
+    post:
+      description: route length
+      operationId: routeLength
+      requestBody:
+        description: route
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/route"
+      responses:
+        "200":
+          description: result
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - length
+                properties:
+                  length:
+                    type: number
+components:
+  schemas:
+    point:
+      type: object
+      required:
+        - latitude
+        - longitude
+      properties:
+        latitude:
+          description: latitude
+          type: number
+        longitude:
+          description: longitude
+          type: number
+    route:
+      type: array
+      items:
+        $ref: "#/components/schemas/point"
