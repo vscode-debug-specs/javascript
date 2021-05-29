@@ -1,7 +1,8 @@
 import localVarRequest from 'request';
 
-export * from './inlineResponse200';
 export * from './point';
+export * from './routeLength';
+export * from './routeRequest';
 
 import * as fs from 'fs';
 
@@ -16,8 +17,9 @@ export interface RequestDetailedFile {
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
-import { InlineResponse200 } from './inlineResponse200';
 import { Point } from './point';
+import { RouteLength } from './routeLength';
+import { RouteRequest } from './routeRequest';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -35,8 +37,9 @@ let enumsMap: {[index: string]: any} = {
 }
 
 let typeMap: {[index: string]: any} = {
-    "InlineResponse200": InlineResponse200,
     "Point": Point,
+    "RouteLength": RouteLength,
+    "RouteRequest": RouteRequest,
 }
 
 export class ObjectSerializer {

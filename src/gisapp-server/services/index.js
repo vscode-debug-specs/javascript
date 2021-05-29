@@ -1,5 +1,5 @@
-const DefaultService = require('./DefaultService');
+const GiscalcService = require('./GiscalcService');
 
 module.exports = {
-  DefaultService,
+  GiscalcService,
 };

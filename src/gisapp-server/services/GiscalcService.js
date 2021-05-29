@@ -4,14 +4,14 @@ const Service = require('./Service');
 /**
 * route length
 *
-* point List route
-* returns inline_response_200
+* routeRequest RouteRequest 
+* returns routeLength
 * */
-const routeLength = ({ point }) => new Promise(
+const routeLength = ({ routeRequest }) => new Promise(
   async (resolve, reject) => {
     try {
       resolve(Service.successResponse({
-        point,
+        routeRequest,
       }));
     } catch (e) {
       reject(Service.rejectResponse(

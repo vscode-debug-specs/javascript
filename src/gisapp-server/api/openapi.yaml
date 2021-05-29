@@ -5,16 +5,28 @@ info:
   version: 0.1.0
 servers:
 - url: /
+tags:
+- description: GIS Calc
+  name: giscalc
 paths:
   /route_length:
     post:
       description: route length
       operationId: routeLength
       requestBody:
+        $ref: '#/components/requestBodies/routeRequest'
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/route'
+              properties:
+                points:
+                  items:
+                    $ref: '#/components/schemas/point'
+                  type: array
+              required:
+              - points
+              title: routeRequest
+              type: object
         description: route
         required: true
       responses:
@@ -22,15 +34,21 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200'
+                $ref: '#/components/schemas/routeLength'
           description: result
-      x-eov-operation-handler: controllers/DefaultController
+      tags:
+      - giscalc
+      x-eov-operation-handler: controllers/GiscalcController
 components:
+  requestBodies:
+    routeRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/routeRequest'
+      required: true
   schemas:
     point:
-      example:
-        latitude: 0.8008281904610115
-        longitude: 6.027456183070403
       properties:
         latitude:
           description: latitude
@@ -46,7 +64,17 @@ components:
       items:
         $ref: '#/components/schemas/point'
       type: array
-    inline_response_200:
+    routeRequest:
+      properties:
+        points:
+          items:
+            $ref: '#/components/schemas/point'
+          type: array
+      required:
+      - points
+      title: routeRequest
+      type: object
+    routeLength:
       example:
         length: 0.8008281904610115
       properties:
@@ -54,4 +82,5 @@ components:
           type: number
       required:
       - length
+      title: routeLength
       type: object

@@ -1,5 +1,5 @@
-const DefaultController = require('./DefaultController');
+const GiscalcController = require('./GiscalcController');
 
 module.exports = {
-  DefaultController,
+  GiscalcController,
 };

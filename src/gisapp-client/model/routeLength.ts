@@ -12,7 +12,7 @@
 
 import { RequestFile } from './models';
 
-export class InlineResponse200 {
+export class RouteLength {
     'length': number;
 
     static discriminator: string | undefined = undefined;
@@ -25,7 +25,7 @@ export class InlineResponse200 {
         }    ];
 
     static getAttributeTypeMap() {
-        return InlineResponse200.attributeTypeMap;
+        return RouteLength.attributeTypeMap;
     }
 }
 

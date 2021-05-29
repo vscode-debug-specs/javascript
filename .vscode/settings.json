@@ -4,6 +4,9 @@
   "yaml.schemas": {
     "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.0/schema.json": [
       "src/openapi/openapi.yaml"
+    ],
+    "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.1/schema.json": [
+      "src/openapi/openapi.yaml"
     ]
   }
 }

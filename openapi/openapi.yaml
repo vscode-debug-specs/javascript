@@ -3,24 +3,36 @@ info:
   title: GIS Calc
   version: 0.1.0
   description: Sample GIS Calc
+tags:
+  - name: giscalc
+    description: GIS Calc
 paths:
   /route_length:
     post:
       description: route length
       operationId: routeLength
+      tags:
+        - giscalc
       requestBody:
         description: route
         required: true
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/route"
+              title: routeRequest
+              type: object
+              required:
+                - points
+              properties:
+                points:
+                  $ref: "#/components/schemas/route"
       responses:
         "200":
           description: result
           content:
             application/json:
               schema:
+                title: routeLength
                 type: object
                 required:
                   - length

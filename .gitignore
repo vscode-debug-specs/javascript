@@ -1,2 +1,5 @@
+combined.log
+error.log
+yarn-error.log
 node_modules
 out

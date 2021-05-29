@@ -2,8 +2,9 @@
 .openapi-generator-ignore
 api.ts
 api/apis.ts
-api/defaultApi.ts
+api/giscalcApi.ts
 git_push.sh
-model/inlineResponse200.ts
 model/models.ts
 model/point.ts
+model/routeLength.ts
+model/routeRequest.ts
