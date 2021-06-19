@@ -14,7 +14,6 @@
       "name": "Launch ts (using out/)",
       "program": "${workspaceFolder}/out/src/bin/bubble_sort_ts.js",
       "args": ["4", "3", "2", "1"],
-      "sourceMaps": true,
       "preLaunchTask": "tsc"
     },
     {
@@ -24,8 +23,7 @@
       "program": "${workspaceFolder}/src/bin/bubble_sort_ts.ts",
       "cwd": "${workspaceFolder}",
       "runtimeArgs": ["-r", "ts-node/register"],
-      "args": ["4", "3", "2", "1"],
-      "sourceMaps": true
+      "args": ["4", "3", "2", "1"]
     },
     {
       "type": "node",

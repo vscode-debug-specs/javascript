@@ -1,15 +1,15 @@
 import { bubbleSort } from "../../bubblesort_ts/bubble_sort";
 import { describe, it } from "mocha";
-import assert from "assert";
+import * as assert from "assert";
 
 describe("bubble_sort ts", () => {
     it("sort list", () => {
         const list = [4, 3, 2, 1];
         bubbleSort(list);
-        assert.equal(list[0], 1);
-        assert.equal(list[1], 2);
-        assert.equal(list[2], 3);
-        assert.equal(list[3], 4);
+        assert.strictEqual(list[0], 1);
+        assert.strictEqual(list[1], 2);
+        assert.strictEqual(list[2], 3);
+        assert.strictEqual(list[3], 4);
     });
 });
 
